@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQQ
+{
+    class program
+    {
+        public void Main(string[] args)
+        {
+            // string collection
+            IList<string> stringlist = new List<string>()
+            {
+                "C# Tutorials", "Learn c++", "MVC Tutorials", "Java" };
+            // LINQ Method Syntax
+            var result = stringlist.Where(s => s.Contains("Tutorials"));
+
+            foreach (var str in result)
+            {
+                Console.WriteLine(str);
+            }
+          
+        }
+    }
+}
