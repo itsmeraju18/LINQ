@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Linq_method
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] Num = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            // LINQ Method Syntax to print Numbers Greater than3
+            IEnumerable<int> result = Num.Where(n => n > 3).ToList();
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
