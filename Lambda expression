@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lambda_Expressions
+{
+    class Program
+    {
+        private static readonly Predicate<string> Findvanilla;
+
+        static void Main(string[] args)
+        {
+            List<string> icecreamList = new List<string>();
+            icecreamList.Add("chocolate Fudge Icecream");
+            icecreamList.Add("vanilla Icecream");
+            icecreamList.Add("Rum Raisin Icecream");
+            string vanilla = icecreamList.Find(Findvanilla);
+            Console.WriteLine(vanilla);
+        }
+        public static bool FindVanilla(string icecream)
+        {
+            return icecream.Equals("Vanilla Icecream");
+        }
+    }
+
+        }
+   
